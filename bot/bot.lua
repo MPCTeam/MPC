@@ -1,8 +1,7 @@
 tdcli = dofile('./tg/tdcli.lua')
 serpent = (loadfile "./libs/serpent.lua")()
 feedparser = (loadfile "./libs/feedparser.lua")()
-our_id = 265541133 -- Put Here Your Bot ID
---ایدی رباتتونو اینجا بزارید
+our_id = 302010666 -- Put Here Your Bot ID
 URL = require "socket.url"
 http = require "socket.http"
 https = require "ssl.https"
@@ -78,41 +77,32 @@ function create_config( )
   -- A simple config with basic plugins and ourselves as privileged user
   config = {
     enabled_plugins = {
-    "banhammer",
-    "groupmanager",
-    "msg-checks",
-    "plugins",
-    "tools"
+    "BanHammer",
+    "GroupManager",
+    "Msg-Checks",
+    "Plugins",
+    "Tools"
  },
-    sudo_users = {157059515},
+    sudo_users = {160149610,0000000},
     admins = {},
     disabled_channels = {},
     moderation = {data = './data/moderation.json'},
-    info_text = [[》Beyond Reborn v1
-An advanced administration bot based on https://valtman.name/telegram-cli
-
-》https://github.com/BeyondTeam/BDReborn 
-
-》Admins :
-》@SoLiD ➣ Founder & Developer《
-》@Makan ➣ Developer《
-》@Rixel ➣ Developer 《
-》@CiveY ➣ Developer
-》@ArmanDev ➣ Manager《
-》@MrPars ➣ Manager《
-
-》Special thanks to :
-》@Vysheng
-》@MrHalix
-》@K_a_I_i_I_i_n_u_x
-》@Nero_Dev
-》And Beyond Team Members
-
-》Our channel :
-》@BeyondTeam《
-
-》Our website :
-》http://BeyondTeam.ir
+    info_text = [[
+<b>OneManager</b> - <i>Cli</i>
+		
+A new <b>AntiSpam-Bot</b> Based on <code>BDReborn</code>
+github.com/MobinDehghani/OneManager
+		
+@MobinDev <i>[Developer]</i>
+@PrivateTeam <i>[Channel]</i>
+		
+Special thanks to :
+@Solid - Saeed
+@Rixel - Komeil
+@CiveY - Younes
+		
+Bot Support :
+https://telegram.me/joinchat/CYuwakBXO9sosgQ_8xuYTw 
 ]],
   }
   serialize_to_file(config, './data/config.lua')
@@ -132,7 +122,7 @@ function load_config( )
   end
   local config = loadfile ("./data/config.lua")()
   for v,user in pairs(config.sudo_users) do
-    print("Allowed user: " .. user)
+    print("Sudo : " .. user)
   end
   return config
 end
@@ -143,7 +133,7 @@ function load_plugins()
   local config = loadfile ("./data/config.lua")()
       for k, v in pairs(config.enabled_plugins) do
         
-        print("Loading Plugins", v)
+        print("loaded", v)
 
         local ok, err =  pcall(function()
           local t = loadfile("plugins/"..v..'.lua')()
