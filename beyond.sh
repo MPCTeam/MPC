@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-cd $HOME/BDReborn
+cd $HOME/OneManager
 
 install() {
 	    cd tg
@@ -26,13 +26,13 @@ if [ "$1" = "install" ]; then
   else
 
 if [ ! -f ./tg/tgcli ]; then
-    echo "tg not found"
+    echo "TG not found"
     echo "Run $0 install"
     exit 1
  fi
 
    echo -e "\033[38;5;208m"
-   echo -e "     > BeyondTeam Source :D                        "
+   echo -e "     > OneManager Source :D                        "
    echo -e "                                              \033[0;00m"
    echo -e "\e[36m"
    ./tg/tgcli -s ./bot/bot.lua -l 1 -E $@
