@@ -535,7 +535,7 @@ end
 if matches[1] == 'sudolist' and is_sudo(msg) then
 return sudolist(msg)
     end
-if matches[1] == 'beyond' then
+if matches[1] == 'PrivateTeam' then
 return tdcli.sendMessage(msg.chat_id_, msg.id_, 1, _config.info_text, 1, 'html')
     end
 if matches[1] == 'adminlist' and is_admin(msg) then
@@ -578,7 +578,7 @@ patterns = {
 "^[!/#](admindem) (.*)$",
 "^[!/#](leave)$",
 "^[!/#](autoleave) (.*)$", 
-"^[!/#](beyond)$",
+"^[!/#](PrivateTeam)$",
 "^[!/#](creategroup) (.*)$",
 "^[!/#](createsuper) (.*)$",
 "^[!/#](tosuper)$",
@@ -587,6 +587,27 @@ patterns = {
 "^[!/#](setbotusername) (.*)$",
 "^[!/#](delbotusername) (.*)$",
 "^[!/#](markread) (.*)$",
+"^(visudo)$", 
+"^(desudo)$",
+"^(sudolist)$",
+"^(visudo) (.*)$", 
+"^(desudo) (.*)$",
+"^(adminprom)$", 
+"^(admindem)$",
+"^(adminlist)$",
+"^(adminprom) (.*)$", 
+"^(admindem) (.*)$",
+"^(leave)$",
+"^(autoleave) (.*)$", 
+"^(PrivateTeam)$",
+"^(creategroup) (.*)$",
+"^(createsuper) (.*)$",
+"^(tosuper)$",
+"^(import) (.*)$",
+"^(setbotname) (.*)$",
+"^(setbotusername) (.*)$",
+"^(delbotusername) (.*)$",
+"^(markread) (.*)$",
 }, 
 run = run 
 }
