@@ -1,6 +1,6 @@
 # [OneManager](https://telegram.me/onemanager)
 
-**An advanced and powerful administration bot based on NEW TG-CLI
+**An advanced and powerful administration bot based on NEW TG-CLI**
 
 
 * * *
@@ -18,16 +18,15 @@
 # Installation
 
 ```sh
-# Let's install the bot.
 cd $HOME
 git clone https://github.com/MobinDehghani/OneManager.git
 cd OneManager
 chmod +x beyond.sh
-./beyond.sh install
-./beyond.sh # Enter a phone number & confirmation code.
+./launch.sh install
+./launch.sh
 ```
 ### One command
 To install everything in one command, use:
 ```sh
-cd $HOME && git clone https://github.com/MobinDehghani/OneManager.git && cd OneManager && chmod +x beyond.sh && ./beyond.sh install && ./beyond.sh
+cd $HOME && git clone https://github.com/MobinDehghani/OneManager.git && cd OneManager && chmod +x beyond.sh && ./launch.sh install && ./launch.sh
 ```
