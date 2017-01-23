@@ -357,7 +357,7 @@ return
 else
    del_msg(msg.chat_id_, msg.id_)
     kick_user(user, chat)
-  tdcli.sendMessage(msg.chat_id_, msg.id_, 0, "_User_ `[ "..user.." ]` _has been_ *kicked* _because of_ *flooding*", 0, "md")
+  tdcli.sendMessage(msg.chat_id_, msg.id_, 0, "User `[ "..user.." ]` has been *kicked* because of *Flooding*", 0, "md")
 redis:setex('sender:'..user..':flood', 30, true)
       end
     end
