@@ -68,7 +68,7 @@ local function list_plugins(only_enabled)
      -- text = text..v..'  '..status..'\n'
     end
   end
-  local text = "*OneManager* Reloaded !"
+  local text = text.."\n_All Plugins Reloaded_\n\n"..nact.." *Plugins Enabled*\n"..nsum.." *Plugins Installed*\n\n@PrivateTeam"
 return text
 end
 
@@ -224,7 +224,8 @@ return {
     "^[!/#](pl) (+) ([%w_%.%-]+) (chat)",
     "^[!/#](pl) (-) ([%w_%.%-]+) (chat)",
     "^!pl? (*)$",
-    "^[!/](reload)$"
+    "^[!/](reload)$",
+    "^(reload)$"
     },
   run = run
 }
