@@ -124,7 +124,7 @@ else
 end
   for k,v in pairs(data[tostring(msg.chat_id_)]['mods'])
 do
-    message = message ..i.. '- '..v..' [' ..k.. '] \n'
+    message = message ..i.. ' - '..v..' [' ..k.. '] \n'
    i = i + 1
 end
   return message
@@ -145,7 +145,7 @@ end
   -- determine if table is empty
   if next(data[tostring(msg.chat_id_)]['owners']) == nil then --fix way
  if not lang then
-    return "_No_ *owner* _in this group_"
+    return "No *Owner* in this group"
 else
     return "در حال حاضر هیچ مالکی برای گروه انتخاب نشده است"
   end
@@ -195,7 +195,7 @@ if administration[tostring(arg.chat_id)]['owners'][tostring(data.id_)] then
 administration[tostring(arg.chat_id)]['owners'][tostring(data.id_)] = user_name
     save_data(_config.moderation.data, administration)
    if not lang then
-  return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _is now the_ *group owner*", 0, "md")
+  return tdcli.sendMessage(arg.chat_id, "", 0, "User "..user_name.." *"..data.id_.."* is now the *Group Owner*", 0, "md")
    else
   return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *به مقام صاحب گروه منتصب شد*", 0, "md")
    end
@@ -217,7 +217,7 @@ user_name = data.first_name_
 end
 if administration[tostring(arg.chat_id)]['mods'][tostring(data.id_)] then
    if not lang then
-    return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _is already a_ *moderator*", 0, "md")
+    return tdcli.sendMessage(arg.chat_id, "", 0, "User "..user_name.." *"..data.id_.."* is already a *moderator*", 0, "md")
 else
     return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *از قبل مدیر گروه بود*", 0, "md")
       end
@@ -1001,7 +1001,7 @@ save_data(_config.moderation.data, data)
 if not lang then
  return "*Webpage* _Has Been Locked_"
 else
- return "ارسال صفحات وب در گروه ممنوع شد"
+return "*Webpage* Has Been Locked\n\nChannel : @PrivateTeam"
 end
 end
 end
