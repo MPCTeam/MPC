@@ -91,18 +91,11 @@ function create_config( )
 <b>OneManager</b> - <i>Cli</i>
 		
 A new <b>AntiSpam-Bot</b> Based on <code>BDReborn</code>
-github.com/MobinDehghani/OneManager
+Close Source
 		
-@MobinDev <i>[Developer]</i>
-@PrivateTeam <i>[Channel]</i>
+@C_N_A <i>[Developer]</i>
+@Mr_Fitne3 <i>[Developer]</i>
 		
-Special thanks to :
-@Solid - Saeed
-@Rixel - Komeil
-@CiveY - Younes
-		
-Bot Support :
-https://telegram.me/joinchat/CYuwakBXO9sosgQ_8xuYTw 
 ]],
   }
   serialize_to_file(config, './data/config.lua')
