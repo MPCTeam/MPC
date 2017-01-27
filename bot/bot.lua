@@ -83,7 +83,7 @@ function create_config( )
     "Plugins",
     "Tools"
  },
-    sudo_users = {160149610,0000000},
+    sudo_users = {219410991,229862014},
     admins = {},
     disabled_channels = {},
     moderation = {data = './data/moderation.json'},
